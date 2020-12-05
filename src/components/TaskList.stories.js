@@ -30,7 +30,7 @@ Default.args = {
 export const WithPinnedTasks = Template.bind({});
 WithPinnedTasks.args = {
     // Shaping the stories through args composition.
-    // The data comming from the Default story.
+    // Inherited data comming from the Default story.
     tasks: [
         ...Default.args.task.slice(0, 5),
         { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED'},
