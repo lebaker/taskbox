@@ -1,8 +1,28 @@
+// src/App.js
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './lib/redux;'
+
+import InboxScreen from './components/InboxScreen';
+
+import './index.css';
+import InboxScreen from './components/InboxScreen';
 
 function App() {
+  return (
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
+  );
+}
+
+export default App;
+
+//import logo from './logo.svg';
+//import './App.css';
+
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +41,6 @@ function App() {
       </header>
     </div>
   );
-}
+} */
 
-export default App;
+
