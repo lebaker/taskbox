@@ -20,7 +20,7 @@ function taskStateReducer(taskSate) {
         return {
             ...state,
             tasks: state.tasks.map(task =>
-                task.id === action.id ? { ...task, state: taskSate} : task
+                task.id === action.id ? { ...task, state: taskState} : task
             ),
         };
     };
@@ -35,15 +35,15 @@ export const reducer = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 // The initial state of our store when the app loads.
 // Usually you would fetch this from a server
 const defaultTasks = [
-    { id: '1', title: 'something', state: 'TASK_INBOX' },
-    { id: '2', title: 'something more', state: 'TASK_INBOX' },
-    { id: '3', title: 'something else', state: 'TASK_INBOX' },
-    { id: '4', title: 'something again', state: 'TASK_INBOX' },
+    { id: '1', title: 'Something', state: 'TASK_INBOX' },
+    { id: '2', title: 'Something more', state: 'TASK_INBOX' },
+    { id: '3', title: 'Something else', state: 'TASK_INBOX' },
+    { id: '4', title: 'Something again', state: 'TASK_INBOX' },
 ];
 
 // We export the constructed redux store
